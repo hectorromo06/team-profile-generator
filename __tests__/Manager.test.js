@@ -28,6 +28,12 @@ describe('Manger Object', () => {
         expect(manager.getEmail()).toEqual('hectorommmo@gmail.com');
     });
 
+    it('Get Manager office number', () => {
+        const manager = new Manager('Hector', 1, 'hectorommmo@gmail.com', 123);
+
+        expect(manager.getOfficeNum()).toEqual(123);
+    })
+
     it("Returns role 'Manager'", () => {
         const manager = new Manager('Hector', 1, 'hectorommmo@gmail.com', 123);
 

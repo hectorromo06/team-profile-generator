@@ -31,7 +31,7 @@ Generate a webpage with the team's basic information to have quick access to nam
 - Jest
 
 ## Video Tutorial
-[Click me]() to watch a video walkthrough with install instructions
+[Click me](https://drive.google.com/file/d/1dys_zUkXYcxMntVrbPHp3941XhB-uTQ0/view) to watch a video walkthrough with install instructions
 
 ## Author
 - Hector Romo

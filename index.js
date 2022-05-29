@@ -102,7 +102,7 @@ const promptEngineer = teamData => {
             }
         }, {
             type: 'number',
-            name: 'id',
+            name: 'engId',
             message: 'Please enter the engineers employee ID : (Required)',
             validate: engineerIdInput => {
                 if (engineerIdInput) {
@@ -114,7 +114,7 @@ const promptEngineer = teamData => {
             }
         }, {
             type: 'input',
-            name: 'email',
+            name: 'engEmail',
             message: 'Please enter the engineers email: (Required)',
             validate: engineerEmailInput => {
                 if (engineerEmailInput) {

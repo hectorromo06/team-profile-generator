@@ -168,7 +168,7 @@ const promptIntern = teamData => {
             }
         }, {
             type: 'number',
-            name: 'id',
+            name: 'internId',
             message: 'Please enter the interns employee ID : (Required)',
             validate: internIdInput => {
                 if (internIdInput) {
@@ -180,7 +180,7 @@ const promptIntern = teamData => {
             }
         }, {
             type: 'input',
-            name: 'email',
+            name: 'internEmail',
             message: 'Please enter the interns email: (Required)',
             validate: internEmailInput => {
                 if (internEmailInput) {
@@ -192,7 +192,7 @@ const promptIntern = teamData => {
             }
         }, {
             type: 'input',
-            name: 'github',
+            name: 'school',
             message: 'Please enter the interns school name: (Required)',
             validate: internSchoolInput => {
                 if (internSchoolInput) {
@@ -211,9 +211,6 @@ const promptIntern = teamData => {
 
 promptManager()
     .then(promptTeam)
-    // .then(resp => {
-    //     console.log(resp);
-    // })
     .then(teamData => {
         return generatePage(teamData);
     })

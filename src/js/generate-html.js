@@ -20,10 +20,10 @@ generateEngineers = engineersArr => {
             return ``;
         } else {
             return `
-        <div id="team-member" class="uk-card uk-card-default uk-card-hover uk-card-body uk-card-small uk-animation-toggle" tabindex="0">
             ${engineersArr 
                 .map(({engName, engId, engEmail, github}) => {
-                return ` 
+                    return ` 
+        <div id="team-member" class="uk-card uk-card-default uk-card-hover uk-card-body uk-card-small uk-animation-toggle" tabindex="0">
             <div id = "member-header" class = "uk-card-header uk-background-primary uk-animation-slide-top-small">
                 <h2>${engName}</h2>  
                 <h3><i class = "fa-solid fa-glasses"></i> Engineer</h3>
@@ -32,13 +32,40 @@ generateEngineers = engineersArr => {
                 <p>ID: ${engId}</p>  
                 <p>Email: <a href = "mailto:${engEmail}"> ${engEmail}</a></p>
                 <p>GitHub: <a href = "https://github.com/${github}" target = "_blank">${github}</a></p>
-            </div>`;
+            </div>
+        </div>`;
             })
                 .join('')
             }
-        </div>`;
+        `;
     };
-}
+};
+
+generateInterns = InternsArr => {
+    if (!InternsArr) {
+        return ``;
+    } else {
+        return `
+        ${InternsArr 
+            .map(({internName, internId, internEmail, school}) => {
+                return ` 
+        <div id="team-member" class="uk-card uk-card-default uk-card-hover uk-card-body uk-card-small uk-animation-toggle" tabindex="0">
+            <div id="member-header" class="uk-card-header uk-background-primary uk-animation-slide-top-small">
+                <h2>${internName}</h2>
+                <h3><i class="fa-solid fa-user-graduate"></i> Intern</h3>
+            </div>
+            <div class="uk-card-body">
+                <p>ID: ${internId}</p>
+                <p>Email: <a href="mailto:${internEmail}">${internEmail}</a></p>
+                <p>School: ${school}</p>
+            </div>
+        </div>`;
+        })
+            .join('')
+        }
+        `;
+    };
+};
 
 module.exports = templateData => {
     // destructure team members from templateData based on their property key names
@@ -73,17 +100,7 @@ module.exports = templateData => {
     <section id="team" class="uk-flex uk-flex-center uk-flex-row uk-flex-wrap uk-flex-wrap-around">
         ${generateManager(manager)}
         ${generateEngineers(engineers)}
-        <div id="team-member"
-            class="uk-card uk-card-default uk-card-hover uk-card-body uk-card-small uk-animation-toggle" tabindex="0">
-            <div id="member-header" class="uk-card-header uk-background-primary uk-animation-slide-top-small">
-                <h2>John</h2>
-                <h3><i class="fa-solid fa-user-graduate"></i> Intern</h3>
-            </div>
-            <div class="uk-card-body">
-                <p>ID: 2</p>
-                <p>Email: <a href="mailto:romo_hector@icloud.com">romo_hector@icloud.com</a></p>
-                <p>School: Sacramento State University</a></p>
-            </div>
+        ${generateInterns(interns)}
     </section>
 </body>
 

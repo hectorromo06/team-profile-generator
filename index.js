@@ -20,7 +20,7 @@ const promptManager = () => {
                 }
             }
         }, {
-            type: 'number',
+            type: 'input',
             name: 'id',
             message: 'Please enter the managers employee ID : (Required)',
             validate: managerIdInput => {
@@ -44,7 +44,7 @@ const promptManager = () => {
                 }
             }
         }, {
-            type: 'number',
+            type: 'input',
             name: 'officeNum',
             message: 'Please enter the managers office number: (Required)',
             validate: managerOfficeNumInput => {
@@ -101,7 +101,7 @@ const promptEngineer = teamData => {
                 }
             }
         }, {
-            type: 'number',
+            type: 'input',
             name: 'engId',
             message: 'Please enter the engineers employee ID : (Required)',
             validate: engineerIdInput => {
@@ -167,7 +167,7 @@ const promptIntern = teamData => {
                 }
             }
         }, {
-            type: 'number',
+            type: 'input',
             name: 'internId',
             message: 'Please enter the interns employee ID : (Required)',
             validate: internIdInput => {

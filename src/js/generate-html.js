@@ -12,17 +12,17 @@ const generateManager = manager => {
                 <p>Office number: ${manager.officeNum}</p>
             </div>
         </div>
-        `;
+    `;
 };
 
 generateEngineers = engineersArr => {
-        if (!engineersArr) {
-            return ``;
-        } else {
-            return `
-            ${engineersArr 
-                .map(({engName, engId, engEmail, github}) => {
-                    return ` 
+    if (!engineersArr) {
+        return ``;
+    } else {
+        return `
+        ${engineersArr 
+            .map(({engName, engId, engEmail, github}) => {
+                return ` 
         <div id="team-member" class="uk-card uk-card-default uk-card-hover uk-card-body uk-card-small uk-animation-toggle" tabindex="0">
             <div id = "member-header" class = "uk-card-header uk-background-primary uk-animation-slide-top-small">
                 <h2>${engName}</h2>  
@@ -60,9 +60,9 @@ generateInterns = InternsArr => {
                 <p>School: ${school}</p>
             </div>
         </div>`;
-        })
-            .join('')
-        }
+            })
+                .join('')
+            }
         `;
     };
 };
